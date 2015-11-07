@@ -43,7 +43,6 @@ namespace Dev204x {
             Console.WriteLine(line, "ZIP:", zipOrPostal);
             Console.WriteLine(line, "Country:", country);
             Console.WriteLine(line, "Birthdate:", birthDate.ToShortDateString());
-            
         }
     }
 }
