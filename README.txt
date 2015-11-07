@@ -9,4 +9,4 @@ dd/mm/yyyy: 11/7/2015
 User: CptDemocracy
 EDX Username: AnthonyAmsterdam
 
-FUN FACT: my EDX username has nothing to do with the actual city. Cheers!
+FUN FACT: my EDX username has nothing to do with the actual city.
