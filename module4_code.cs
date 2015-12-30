@@ -34,7 +34,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication19
+namespace Dev204x
 {
     // in real-life scenario we would declare Student and Teacher
     // as classes instead of structs and make them inherit from a 
