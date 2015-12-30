@@ -234,10 +234,12 @@ namespace ConsoleApplication19
 
             #region outputting Student objects from the array to console
 
-            for (int i = 0; i < studentArray.Length; ++i) {
-                Console.WriteLine("Student #{0}", i);
-                Console.WriteLine(studentArray[i]);
+            int count = 1;
+            foreach (var student in studentArray) {
+                Console.WriteLine("Student #{0}", count);
+                Console.WriteLine(student);
                 Console.WriteLine();
+                ++count;
             }
             
             #endregion
