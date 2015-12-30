@@ -79,6 +79,7 @@ namespace Dev204x {
         
         public override string ToString() {
             return "First Name:     " + FirstName                     + '\n' +
+                   "Last Name:      " + LastName                      + '\n' +
                    "Birthdate:      " + BirthDate.ToShortDateString() + '\n' +
                    "Address Line 1: " + AddressLine1                  + '\n' +
                    "Address Line 2: " + AddressLine2                  + '\n' +
