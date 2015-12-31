@@ -1,33 +1,77 @@
 /*
-
 1. Create a class file for a Student.
+   (See: line 89)
+
 2. Create a class file for a Teacher.
+   (See: line 101)
+
 3. Create a class file for a UProgram.
+   (See: line 108)
+
 4. Create a class file for a Degree.
+   (See: line 110)
+
 5. Create a class file for a Course.
+   (See: line 146)
+
 6. Ensure that you encapsulate your member variables in the class files using properties.
+   (See: line 182)
+
 7. The Course object should contain an array of Student objects so ensure that you create 
 an array inside the Course object to hold Students as well as an array to contain Teacher 
 objects as each course may have more than one teacher or TAs.  
+   (See: line 187, line 188)
+
 8. Create arrays of size 3 for students and the same for teachers.  
+
+
 9. The UProgram object should be able to contain degrees and the degrees should be able to 
 contain courses as well but for the purposes of this assignment, just ensure you have a 
 single variable in UProgram to hold a Degree and single variable in Degree to hold a Course.  
+
+
 10. Add a static class variable to the Student class to track the number of students currently 
 enrolled in a school.
+   (See: line 105)
+
 11. Increment a student object count every time a Student is created.
+   (See: line 103)
+
 12. In the Main() method instantiate three Student objects.
+   (See: line 253)
+
 13. In the Main() method instantiate a Course object called Programming with C#.
+   (See: line 293)
+
 14. In the Main() method add your three students to this Course object.
+   (See: line 303)
+
 15. In the Main() method instantiate at least one Teacher object.
-16. In the Main() method add that Teacher object to your Course object
-YOU ARE HERE ----> 17. In the Main() method instantiate a Degree object, such as Bachelor.
+   (See: line 311)
+
+16. In the Main() method add that Teacher object to your Course object.
+   (See: line 327)
+
+17. In the Main() method instantiate a Degree object, such as Bachelor.
+   (See: line 333)
+
 18. In the Main() method add your Course object to the Degree object.
+   (See: line 342)
+
 19. In the Main() method instantiate a UProgram object called Information Technology.
+   (See: line 348)
+
 20. In the Main() method add the Degree object to the UProgram object.
+   (See: line 357)
+
 21. In the Main() method using Console.WriteLine statements, output the name of the program and the degree it contains
+   (See: line 363)
+
 22. In the Main() method using Console.WriteLine statements, output the name of the course in the degree
+   (See: line 363)
+
 23. In the Main() method using Console.WriteLine statements, output the count of the number of students in the course.
+   (See: line 363)
 
 Your output should look similar to this:
     >>>The Information Technology program contains the Bachelor of Science degree
@@ -35,12 +79,10 @@ Your output should look similar to this:
     >>>The Bachelor of Science degree contains the course Programming with C#
     >>>
     >>>The Programming with C# course contains 3 student(s)|
-
 */
 
 using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 
 namespace Dev204x {
 
@@ -54,18 +96,6 @@ namespace Dev204x {
         public string   StateProvince   { get; set; }
         public string   ZipPostal       { get; set; }
         public string   Country         { get; set; }
-        
-        public override string ToString() {
-            return "First Name:     " + FirstName                     + '\n' +
-                   "Last Name:      " + LastName                      + '\n' +
-                   "Birthdate:      " + BirthDate.ToShortDateString() + '\n' +
-                   "Address Line 1: " + AddressLine1                  + '\n' +
-                   "Address Line 2: " + AddressLine2                  + '\n' +
-                   "City:           " + City                          + '\n' +
-                   "State/Province: " + StateProvince                 + '\n' +
-                   "Zip/Postal:     " + ZipPostal                     + '\n' +
-                   "Country:        " + Country;
-        }
     }               
 
     class Student : Person {
@@ -219,6 +249,9 @@ namespace Dev204x {
     class Program {
             
         static void Main() {
+
+            #region Instantiating 3 Student objects
+
             var student1 = new Student {
                 FirstName       = "Billy",
                 LastName        = "Jackson",
@@ -255,15 +288,27 @@ namespace Dev204x {
                 Country         = "U.S.A."
             };
 
+            #endregion
+
+            #region Instantiating a Course object
+
             var csCourse = new Course {
                 Name            = "Programming with C#",
                 Credits         = 20,
                 DurationInWeeks = 4
             };
 
+            #endregion
+
+            #region Adding 3 Students to the Course object
+
             csCourse.AddStudent(student1);
             csCourse.AddStudent(student2);
             csCourse.AddStudent(student3);
+
+            #endregion
+
+            #region Instantiating a Teacher object
 
             var teacher = new Teacher {
                 FirstName       = "Jimmy",
@@ -277,21 +322,45 @@ namespace Dev204x {
                 Country         = "U.S.A."
             };
 
+            #endregion
+
+            #region Adding the Teacher object to the Course object
+
             csCourse.AddTeacher(teacher);
-                
+
+            #endregion
+
+            #region Instantiating a Degree object
+
             var bachelorsDegree = new Degree {
                 Name            = "Bachelor of Science",
                 CreditsRequired = 120
             };
 
+            #endregion
+
+            #region Adding the Course object to the Degree object
+
             bachelorsDegree.AddCourse(csCourse);
+
+            #endregion
+
+            #region Instantiating a UProgram object called Information Technology
 
             var uProgram = new UProgram {
                 Name            = "Information Technology",
                 DepartmentHead  = "Leland Stanford"
             };
+
+            #endregion
+
+            #region Adding the Degree object to the UProgram object
+
             uProgram.AddDegree(bachelorsDegree);
 
+            #endregion
+
+            #region Output
             string uProgramOutputFormatString = "The {0} contains the {1} degree";
             string degreeOutputFormatString   = "The {0} degree contains the course {1}";
             string courseOutputFormatString   = "The {0} contains {1} student{2}";
@@ -308,7 +377,7 @@ namespace Dev204x {
                     Console.WriteLine();
                 }
             }
-        }
-        
+            #endregion
+        }        
     }
 }
