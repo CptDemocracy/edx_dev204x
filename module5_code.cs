@@ -191,7 +191,7 @@ namespace Dev204x {
             get {
                 Teacher[] teacherArray = new Teacher[_teachers.Count];
                 _teachers.CopyTo(teacherArray, 0);
-                return _teachers;
+                return teacherArray;
             }
         }
 
@@ -199,7 +199,7 @@ namespace Dev204x {
             get {
                 Student[] studentArray = new Student[_students.Count];
                 _students.CopyTo(studentArray, 0);
-                return _students;
+                return studentArray;
             }
         }
 
