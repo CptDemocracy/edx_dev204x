@@ -130,8 +130,6 @@ namespace ConsoleApplication23 {
             if (_gradeStack.Count == 0) {
                 throw new InvalidOperationException("can't pop off of an empty stack");
             }
-            // downcasting is acceptable since _gradeStack is guaranteed to only contain
-            // objects of class Grade
             return _gradeStack.Pop();
         }
 
