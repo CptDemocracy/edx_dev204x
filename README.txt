@@ -5,6 +5,8 @@ Since the peer review feature on EDX is of now fairly limited, i.e. lacks proper
 
 Feel free to comment, contribute, share with your classmates if you want to. However, I plead that you don't just blindly copy the code from this repository to complete assignments for the sake of appearance, but actually learn from it, where it applies.
 
+Please feel free to message me at profit234@gmail.com if you spot a bug or a security-vulnerable piece of code. Thank you!
+
 dd/mm/yyyy: 11/7/2015
 User: CptDemocracy
 EDX Username: AnthonyAmsterdam
